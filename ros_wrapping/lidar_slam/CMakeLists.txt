@@ -32,6 +32,7 @@ find_package(catkin REQUIRED COMPONENTS
 
 # Find catkin macros and libraries
 find_package(cv_bridge)
+find_package(Boost REQUIRED COMPONENTS timer)
 
 ################################################
 ## Declare ROS messages, services and actions ##

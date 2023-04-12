@@ -80,7 +80,7 @@ target_compile_definitions(LidarSlam
 # and https://stackoverflow.com/questions/52018092/how-to-set-rpath-and-runpath-with-gcc-ld
 # for more info
 if (UNIX AND NOT APPLE)
-  target_link_options(LidarSlam PUBLIC "-Wl,--disable-new-dtags")
+  target_link_libraries(LidarSlam PUBLIC "-Wl,--disable-new-dtags")
 endif()
 
 # Install library

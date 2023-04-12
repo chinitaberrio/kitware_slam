@@ -65,7 +65,7 @@ if (SLAM_PARAVIEW_PLUGIN)
   # SLAM lib is compatible with position independent code.
   set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 endif()
-
+find_package(Boost REQUIRED COMPONENTS timer)
 find_package(nanoflann REQUIRED)
 
 # Find Eigen3. If it defines the target, this is used. If not,

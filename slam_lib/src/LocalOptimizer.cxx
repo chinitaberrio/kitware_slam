@@ -92,7 +92,8 @@ ceres::Solver::Summary LocalOptimizer::Solve()
     #if (CERES_VERSION_MAJOR <= 2 && CERES_VERSION_MINOR < 1)
       this->Problem->SetParameterization(this->PoseArray.data(), new ceres::SubsetParameterization(6, {2, 3, 4}));
     #else
-      this->Problem->SetManifold(this->PoseArray.data(), new ceres::SubsetManifold(6, {2, 3, 4}));
+      this->Problem->SetParameterization(this->PoseArray.data(), new ceres::SubsetParameterization(6, {2, 3, 4}));
+      //this->Problem->SetManifold(this->PoseArray.data(), new ceres::SubsetManifold(6, {2, 3, 4}));
     #endif
   }
 
